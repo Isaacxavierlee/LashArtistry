@@ -51,10 +51,11 @@ body {
   transform: translateY(-50%);
 }
 
+/* Control buttons */
 .controls .control {
   padding: 1rem;
   cursor: pointer;
-  background-color: #E6E6FA; /* Light Pink background color */
+  background-color: rgba(230, 230, 250, 0.7); /* Transparent light purple background */
   width: 55px;
   height: 55px;
   border-radius: 50%;
@@ -63,7 +64,7 @@ body {
   align-items: center;
   margin: 0.7rem 0;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Added transitions */
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .controls .control i {
@@ -73,8 +74,10 @@ body {
   transition: color 0.3s ease; /* Added transition for icon color */
 }
 
-.controls .control:hover {
-  background-color: #2aac8c; /* Light Green background color on hover */
+/* On hover, make them slightly more opaque */
+.controls .control:hover,
+.theme-btn:hover {
+  background-color: rgba(230, 230, 250, 0.9); /* Slightly more opaque light purple */
   transform: scale(1.1); /* Scale up on hover */
 }
 
@@ -123,20 +126,21 @@ body {
 
 /* ... (previous CSS code) ... */
 
+/* Theme button */
 .theme-btn {
   top: 5%;
   right: 3%;
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-color: #E6E6FA ; /* Light Pink background color for theme button */
+  background-color: rgba(42, 172, 140, 0.7); /* Transparent light green background */
   cursor: pointer;
   position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Added transitions */
+  transition: all 0.1s ease-in-out;
 }
 
 .theme-btn:active {
