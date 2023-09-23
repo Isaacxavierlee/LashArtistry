@@ -184,12 +184,19 @@ main {
 
 .hero {
   text-align: center;
-  background-image: url('your-hero-image.jpg'); /* Replace with your actual hero image */
+  background-image: url('./img/nails.jpg'); /* Replace with your actual hero image */
   background-size: cover;
   background-position: center;
   color: white;
   padding: 50px;
+  border-top-left-radius: 20px; /* Add curved edges to the top left corner */
+  border-top-right-radius: 20px; /* Add curved edges to the top right corner */
+border-bottom-left-radius: 20px; /* Add curved edges to the top left corner */
+  border-bottom-right-radius: 20px; /* Add curved edges to the top right corner */
+
+  
 }
+
 
 .hero h2 {
   font-size: 2.5rem;
@@ -265,8 +272,11 @@ main {
 
 /* Center the copyright text vertically */
 .footer-content p {
-   display: flex;
+   margin: 30px 0; /* Add margin to push it lower */
+  display: flex;
   justify-content: center;
+  align-items: center;
+  font-size: 18px; /* Adjust the font size as needed */
 }
 
 /* Social media icons */
