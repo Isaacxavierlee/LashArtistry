@@ -18,3 +18,14 @@
       icon.parentElement.classList.add('active-btn');
     }
   });
+
+const images = document.querySelectorAll('.image-slider img');
+let currentImageIndex = 0;
+
+function changeImage() {
+  images[currentImageIndex].style.display = 'none';
+  currentImageIndex = (currentImageIndex + 1) % images.length;
+  images[currentImageIndex].style.display = 'block';
+}
+
+setInterval(changeImage, 3000); // Change image every 3 seconds

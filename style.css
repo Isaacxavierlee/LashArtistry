@@ -226,22 +226,73 @@ border-bottom-left-radius: 20px; /* Add curved edges to the top left corner */
   background-color: #2aac8c; /* Light Green button background on hover */
   color: #FFB6C1; /* Light Pink button text color on hover */
 }
+/* Style for the "About Me" section */
+/* Style for the "About Me" section */
 .about {
   text-align: center;
   padding: 20px;
 }
 
+/* Container for the content */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style for the title */
 .about h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  position: relative; /* Position relative for the h2 element */
+  position: relative;
 }
 
-.about p {
+/* Style for the underline below the title */
+.about .underline {
+  width: 60px;
+  height: 2px;
+  background-color: #2aac8c;
+  margin: 0 auto 20px;
+}
+
+/* Style for the text content */
+.about-text p {
   font-size: 1.1rem;
   line-height: 1.6;
 }
 
+/* Style for the image slider container */
+/* Style for the image slider container */
+/* Style for the image slider container */
+/* Style for the image slider container */
+.image-slider {
+  max-width: 100%;
+  width: auto;
+  height: 300px; /* Set a fixed height as per your design */
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px; /* Add curved borders to the image slider */
+}
+
+/* Style for individual images in the slider */
+.image-slider img {
+  width: 100%;
+  height: auto; /* Automatically adjust height to maintain aspect ratio */
+  display: none;
+  border-radius: 20px; /* Add curved borders to the images */
+  transition: transform 0.3s ease; /* Add a smooth transform effect */
+}
+
+/* Show the first image by default */
+.image-slider img:first-child {
+  display: block;
+}
+
+/* Add a hover effect to the images */
+.image-slider img:hover {
+  transform: scale(1.05); /* Scale up the image on hover */
+}
 
 
 /* Footer styles */
