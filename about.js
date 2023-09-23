@@ -18,3 +18,22 @@
       icon.parentElement.classList.add('active-btn');
     }
   });
+
+
+  function slider() {
+    return {
+      images: [
+        { src: 'img/1.jpg', alt: 'Ms. Vanity Image 1' },
+        { src: 'img/2.jpg', alt: 'Ms. Vanity Image 2' },
+        { src: 'img/1.jpg', alt: 'Ms. Vanity Image 3' },
+        // Add more images as needed
+      ],
+      active: 0,
+      prevImage() {
+        this.active = this.active === 0 ? this.images.length - 1 : this.active - 1;
+      },
+      nextImage() {
+        this.active = this.active === this.images.length - 1 ? 0 : this.active + 1;
+      },
+    };
+  }

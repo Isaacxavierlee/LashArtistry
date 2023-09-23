@@ -163,3 +163,49 @@ body {
   color: #FFB6C1; /* Light Pink icon color on hover */
 }
 
+/* Style for the Ms. Vanity introduction section */
+.about {
+  text-align: center;
+  padding: 20px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.about .underline {
+  width: 60px;
+  height: 2px;
+  background-color: #2aac8c;
+  margin: 0 auto 20px;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.hero {
+  text-align: center;
+  background-image: url('./img/nails.jpg'); /* Replace with your actual hero image */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 50px;
+  border-top-left-radius: 20px; /* Add curved edges to the top left corner */
+  border-top-right-radius: 20px; /* Add curved edges to the top right corner */
+border-bottom-left-radius: 20px; /* Add curved edges to the top left corner */
+  border-bottom-right-radius: 20px; /* Add curved edges to the top right corner */
+
+  
+}
+
