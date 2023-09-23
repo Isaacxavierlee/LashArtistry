@@ -6,8 +6,8 @@
 }
 
 :root {
-  --color-primary: #fff; /* Light Blue */
-  --color-secondary: #E6E6FA /* Coral */
+  --color-primary: #73d9a9; /* Light Blue */
+  --color-secondary: #ffffff /* Coral */
   --color-white: #FFFFFF;
   --color-black: #000;
   --color-grey0: #f8f8f8;
@@ -79,7 +79,7 @@ body {
 }
 
 .controls .control:hover i {
-  color: #FFB6C1 /* Light Pink icon color on hover */
+  color: #FFB6C1;/* Light Pink icon color on hover */
 }
 
 .controls .active-btn {
@@ -97,7 +97,7 @@ body {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-color: #E6E6FA  /* Light Pink background color for theme button */
+  background-color: #2aac8c; /* Light Pink background color for theme button */
   cursor: pointer;
   position: fixed;
   display: flex;
@@ -151,12 +151,113 @@ body {
 }
 
 .theme-btn:hover {
-  background-color: #E6E6FA ; /* Light Green background color on hover */
+  background-color: #2aac8c; /* Light Green background color on hover */
   transform: scale(1.1); /* Scale up on hover */
 }
 
 .theme-btn:hover i {
   color: #FFB6C1; /* Light Pink icon color on hover */
+}
+
+/* ... (rest of the CSS code) ... */
+
+header {
+  background-color: #FFB6C1; /* Light Pink header background */
+  text-align: center;
+  padding: 20px;
+  color: #2aac8c; /* Light Green text color */
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+/* Main content styles */
+main {
+  padding: 20px;
+}
+
+.hero {
+  text-align: center;
+  background-image: url('your-hero-image.jpg'); /* Replace with your actual hero image */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 50px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #FFB6C1; /* Light Pink button background */
+  color: #2aac8c; /* Light Green button text color */
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #2aac8c; /* Light Green button background on hover */
+  color: #FFB6C1; /* Light Pink button text color on hover */
+}
+
+.about {
+  text-align: center;
+  padding: 20px;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Services section styles */
+.services {
+  text-align: center;
+  padding: 20px;
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.services li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #2aac8c; /* Light Green footer background */
+  color: #FFFFFF; /* White text color */
 }
 
 /* ... (rest of the CSS code) ... */
