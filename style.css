@@ -259,9 +259,12 @@ border-bottom-left-radius: 20px; /* Add curved edges to the top left corner */
 /* Style for the text content */
 .about-text p {
   font-size: 1.1rem;
-  line-height: 1.6;
+  line-height: 1.4;
+  margin-bottom: 20px; /* Add margin to create space between text and slider */
 }
+  
 
+/* Style for the image slider container */
 /* Style for the image slider container */
 /* Style for the image slider container */
 /* Style for the image slider container */
@@ -277,8 +280,8 @@ border-bottom-left-radius: 20px; /* Add curved edges to the top left corner */
 
 /* Style for individual images in the slider */
 .image-slider img {
-  width: 100%;
-  height: auto; /* Automatically adjust height to maintain aspect ratio */
+  width: auto; /* Automatically adjust width to maintain aspect ratio */
+  height: 100%; /* Set the height to 100% to fill the container */
   display: none;
   border-radius: 20px; /* Add curved borders to the images */
   transition: transform 0.3s ease; /* Add a smooth transform effect */
@@ -293,7 +296,6 @@ border-bottom-left-radius: 20px; /* Add curved edges to the top left corner */
 .image-slider img:hover {
   transform: scale(1.05); /* Scale up the image on hover */
 }
-
 
 /* Footer styles */
 /* Footer styles */
