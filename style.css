@@ -6,8 +6,8 @@
 }
 
 :root {
-  --color-primary: #FFB6C1; /* Light Pink */
-  --color-secondary: #FFFFFF; /* White */
+  --color-primary: #fff; /* Light Blue */
+  --color-secondary: #E6E6FA /* Coral */
   --color-white: #FFFFFF;
   --color-black: #000;
   --color-grey0: #f8f8f8;
@@ -21,10 +21,7 @@
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
 }
 
-
-
 /* Add more styles using the light mode color scheme */
-
 
 body {
   background-color: var(--color-primary);
@@ -34,76 +31,132 @@ body {
   transition: all 0.4s ease-in-out;
 }
 
-
 .controls.hidden {
-    display: none;
+  display: none;
 }
 
 .controls-container .controls a {
-    text-decoration: none; /* Remove the underline */
+  text-decoration: none; /* Remove the underline */
 }
 
 .controls {
-    position: fixed;
-    z-index: 10;
-    top: 50%;
-    right: 3%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transform: translateY(-50%);
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  right: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
 }
+
 .controls .control {
-    padding: 1rem;
-    cursor: pointer;
-    background-color: #FFB6C1; /* Light Pink background color */
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0.7rem 0;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  cursor: pointer;
+  background-color: #E6E6FA; /* Light Pink background color */
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.7rem 0;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Added transitions */
 }
+
 .controls .control i {
-    font-size: 1.2rem;
-    color: #FFFFFF; /* White icon color */
-    pointer-events: none;
+  font-size: 1.2rem;
+  color: #FFFFFF; /* White icon color */
+  pointer-events: none;
+  transition: color 0.3s ease; /* Added transition for icon color */
 }
+
+.controls .control:hover {
+  background-color: #2aac8c; /* Light Green background color on hover */
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+.controls .control:hover i {
+  color: #FFB6C1 /* Light Pink icon color on hover */
+}
+
 .controls .active-btn {
-    background-color: #FFB6C1; /* White background color for active button */
-    transition: all 0.4s ease-in-out;
+  background-color: #FFB6C1; /* Light Pink background color for active button */
+  transition: all 0.4s ease-in-out;
 }
+
 .controls .active-btn i {
-    color: #FFB6C1; /* Light Pink color for active button icon */
+  color: #2aac8c; /* Light Green icon color for active button */
 }
 
 .theme-btn {
-    top: 5%;
-    right: 3%;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background-color: #FFB6C1; /* Light Pink background color for theme button */
-    cursor: pointer;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
-    transition: all 0.1s ease-in-out;
+  top: 5%;
+  right: 3%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #E6E6FA  /* Light Pink background color for theme button */
+  cursor: pointer;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease-in-out;
 }
+
 .theme-btn:active {
-    transform: translateY(-3px);
+  transform: translateY(-3px);
 }
+
 .theme-btn i {
-    font-size: 1.4rem;
-    color: #FFFFFF; /* White icon color for theme button */
-    pointer-events: none;
+  font-size: 1.4rem;
+  color: #FFFFFF; /* White icon color for theme button */
+  pointer-events: none;
 }
 
 .controls .active-btn i {
-    color: #FFFFFF; /* White icon color for active button */
+  color: #2aac8c; /* Light Green icon color for active button */
 }
+
+/* ... (previous CSS code) ... */
+
+.theme-btn {
+  top: 5%;
+  right: 3%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #E6E6FA ; /* Light Pink background color for theme button */
+  cursor: pointer;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Added transitions */
+}
+
+.theme-btn:active {
+  transform: translateY(-3px);
+}
+
+.theme-btn i {
+  font-size: 1.4rem;
+  color: #FFFFFF; /* White icon color for theme button */
+  pointer-events: none;
+  transition: color 0.3s ease; /* Added transition for icon color */
+}
+
+.theme-btn:hover {
+  background-color: #E6E6FA ; /* Light Green background color on hover */
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+.theme-btn:hover i {
+  color: #FFB6C1; /* Light Pink icon color on hover */
+}
+
+/* ... (rest of the CSS code) ... */
