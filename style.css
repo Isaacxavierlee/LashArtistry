@@ -253,11 +253,37 @@ main {
 }
 
 /* Footer styles */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #2aac8c; /* Light Green footer background */
-  color: #FFFFFF; /* White text color */
+/* Footer styles */
+/* Center the entire content */
+
+/* Footer styles */
+/* Center the entire content */
+/* Footer styles */
+
+
+/* Center footer content */
+
+/* Center the copyright text vertically */
+.footer-content p {
+   display: flex;
+  justify-content: center;
 }
 
-/* ... (rest of the CSS code) ... */
+/* Social media icons */
+/* Center the social media icons horizontally */
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+/* Style for social media icons */
+.social-icons a {
+  color: #FFFFFF; /* White icon color */
+  font-size: 24px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #FFB6C1; /* Light Pink icon color on hover */
+}
