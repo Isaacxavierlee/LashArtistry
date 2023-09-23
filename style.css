@@ -222,7 +222,6 @@ border-bottom-left-radius: 20px; /* Add curved edges to the top left corner */
   background-color: #2aac8c; /* Light Green button background on hover */
   color: #FFB6C1; /* Light Pink button text color on hover */
 }
-
 .about {
   text-align: center;
   padding: 20px;
@@ -231,6 +230,7 @@ border-bottom-left-radius: 20px; /* Add curved edges to the top left corner */
 .about h2 {
   font-size: 2rem;
   margin-bottom: 20px;
+  position: relative; /* Position relative for the h2 element */
 }
 
 .about p {
@@ -238,26 +238,7 @@ border-bottom-left-radius: 20px; /* Add curved edges to the top left corner */
   line-height: 1.6;
 }
 
-/* Services section styles */
-.services {
-  text-align: center;
-  padding: 20px;
-}
 
-.services h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.services ul {
-  list-style: none;
-  padding: 0;
-}
-
-.services li {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-}
 
 /* Footer styles */
 /* Footer styles */
@@ -269,7 +250,14 @@ border-bottom-left-radius: 20px; /* Add curved edges to the top left corner */
 
 
 /* Center footer content */
-
+@keyframes slideIn {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 /* Center the copyright text vertically */
 .footer-content p {
    margin: 30px 0; /* Add margin to push it lower */
@@ -277,10 +265,12 @@ border-bottom-left-radius: 20px; /* Add curved edges to the top left corner */
   justify-content: center;
   align-items: center;
   font-size: 18px; /* Adjust the font size as needed */
+  animation: slideIn 0.5s ease;
 }
 
 /* Social media icons */
 /* Center the social media icons horizontally */
+
 .social-icons {
   display: flex;
   justify-content: center;
