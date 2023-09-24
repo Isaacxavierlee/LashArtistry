@@ -31,6 +31,11 @@ body {
   transition: all 0.4s ease-in-out;
 }
 
+.controls-container {
+  position: relative;
+  z-index: 11; /* Set a higher z-index to keep the controls above other content */
+}
+
 .controls.hidden {
   display: none;
 }
@@ -108,6 +113,7 @@ body {
   align-items: center;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
   transition: all 0.1s ease-in-out;
+  z-index: 12; /* Set a higher z-index to keep the theme button above other content */
 }
 
 .theme-btn:active {
@@ -344,3 +350,4 @@ border-bottom-left-radius: 20px; /* Add curved edges to the top left corner */
 .social-icons a:hover {
   color: #FFB6C1; /* Light Pink icon color on hover */
 }
+

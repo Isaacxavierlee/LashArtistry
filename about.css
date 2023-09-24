@@ -31,6 +31,11 @@ body {
   transition: all 0.4s ease-in-out;
 }
 
+.controls-container {
+  position: relative;
+  z-index: 11; /* Set a higher z-index to keep the controls above other content */
+}
+
 .controls.hidden {
   display: none;
 }
@@ -108,6 +113,7 @@ body {
   align-items: center;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
   transition: all 0.1s ease-in-out;
+  z-index: 12; /* Set a higher z-index to keep the theme button above other content */
 }
 
 .theme-btn:active {
@@ -163,49 +169,195 @@ body {
   color: #FFB6C1; /* Light Pink icon color on hover */
 }
 
+
 /* Style for the Ms. Vanity introduction section */
-.about {
+header {
+  background-color: #FFB6C1; /* Light Pink header background */
   text-align: center;
   padding: 20px;
+  color: #2aac8c; /* Light Green text color */
+}
+
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  
+}
+
+/* Add this CSS to style the container, text, and image */
+/* Styles for the text container and image frame */
+/* Styles for the text container and image frame */
+.about {
+  position: relative;
+  margin-bottom: 40px; /* Add margin to create space between the title and image */
+  padding: 20px; /* Add padding to create space around the background image */
+  border: 2px solid #ffffff; /* Add a colored border around the background image */
+  border-radius: 20px; /* Rounded corners for the border */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.about::before {
+  content: "";
+  background-image: url('img/v.jpg'); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6; /* Adjust the opacity as needed */
+  position: absolute;
+  top: -2px; /* Adjust the top position to overlap the border */
+  left: -2px; /* Adjust the left position to overlap the border */
+  right: -2px; /* Adjust the right position to overlap the border */
+  bottom: -2px; /* Adjust the bottom position to overlap the border */
+  z-index: -1; /* Place the background image behind other content */
 }
 
 .about-content {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px; /* Adjust the maximum width as needed */
+  text-align: left;
+  margin: 20px; /* Add margin for spacing */
 }
 
 .about h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  position: relative;
+  text-align: center;
 }
 
 .about .underline {
   width: 60px;
   height: 2px;
-  background-color: #2aac8c;
+  background-color: #ffffff;
   margin: 0 auto 20px;
 }
 
 .about-text p {
   font-size: 1.1rem;
   line-height: 1.6;
+  margin-bottom: 20px;
+  font-weight: bold; /* Add font-weight to make the text bold */
+  color: #121212; /* Change the text color to white */
 }
 
-.hero {
+
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.frame-image {
+  max-width: 100%; /* Ensure the image doesn't exceed its container */
+  border-radius: 20px; /* Smaller rounded corners for the image frame */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(0, 0, 0, 0.5); /* Add an inner and outer shadow to create a creative frame effect */
+  border: 1px solid #ffffff;/* Reduced border size */
+}
+
+
+/* Style for the image gallery section */
+.image-gallery {
   text-align: center;
-  background-image: url('./img/nails.jpg'); /* Replace with your actual hero image */
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 50px;
-  border-top-left-radius: 20px; /* Add curved edges to the top left corner */
-  border-top-right-radius: 20px; /* Add curved edges to the top right corner */
-border-bottom-left-radius: 20px; /* Add curved edges to the top left corner */
-  border-bottom-right-radius: 20px; /* Add curved edges to the top right corner */
-
-  
+  margin-top: 20px;
 }
 
+.image-gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.image-gallery .image-container {
+  display: inline-block;
+  margin: 10px;
+  border: 2px solid #ffffff; /* Add a border to simulate photo frames */
+  border-radius: 10px; /* Rounded corners for the frames */
+  overflow: hidden;
+  width: calc(33.33% - 20px); /* Adjust the width and spacing as needed */
+  max-width: calc(100% / 3 - 20px); /* Ensure each image fits in one-third of the container */
+}
+
+.image-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Style for the image gallery section */
+.image-gallery {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.image-gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Style for individual image containers */
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  border: 2px solid #2aac8c; /* Add a border to simulate photo frames */
+  border-radius: 10px; /* Rounded corners for the frames */
+  overflow: hidden;
+  width: calc(33.33% - 20px); /* Adjust the width and spacing as needed */
+  max-width: calc(100% / 3 - 20px); /* Ensure each image container takes one-third of the row width minus spacing */
+  padding-bottom: calc(100% / 2.5); /* Adjust padding to reduce the height (e.g., one-third of the width) */
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+/* Add a wrapper to contain the image containers side by side */
+.image-container-wrapper {
+  display: flex;
+  flex-wrap: wrap; /* Allow containers to wrap to the next row if needed */
+  justify-content: space-between; /* Spread the containers evenly */
+  margin: 0 -10px; /* Add negative margin to offset container margins */
+}
+
+.image-container:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain image aspect ratio while covering the container */
+}
+
+/* Card overlay styles */
+.image-overlay {
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent overlay */
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  transform: translateY(-100%); /* Initially hidden above the image */
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover .image-overlay {
+  transform: translateY(0); /* Slide up the overlay on hover */
+}
+
+.image-overlay h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.image-overlay p {
+  font-size: 1rem;
+}
