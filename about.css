@@ -33,7 +33,7 @@ body {
 
 .controls-container {
   position: relative;
-  z-index: 11; /* Set a higher z-index to keep the controls above other content */
+  z-index: 11;
 }
 
 .controls.hidden {
@@ -41,7 +41,7 @@ body {
 }
 
 .controls-container .controls a {
-  text-decoration: none; /* Remove the underline */
+  text-decoration: none;
 }
 
 .controls {
@@ -56,11 +56,10 @@ body {
   transform: translateY(-50%);
 }
 
-/* Control buttons */
 .controls .control {
   padding: 1rem;
   cursor: pointer;
-  background-color: rgba(230, 230, 250, 0.7); /* Transparent light purple background */
+  background-color: rgba(230, 230, 250, 0.7);
   width: 55px;
   height: 55px;
   border-radius: 50%;
@@ -74,17 +73,18 @@ body {
 
 .controls .control i {
   font-size: 1.2rem;
-  color: #FFFFFF; /* White icon color */
+  color: #FFFFFF;
   pointer-events: none;
-  transition: color 0.3s ease; /* Added transition for icon color */
+  transition: color 0.3s ease;
 }
 
 /* On hover, make them slightly more opaque */
 .controls .control:hover,
 .theme-btn:hover {
-  background-color: rgba(230, 230, 250, 0.9); /* Slightly more opaque light purple */
-  transform: scale(1.1); /* Scale up on hover */
+  background-color: rgba(230, 230, 250, 0.9);
+  transform: scale(1.1);
 }
+
 
 .controls .control:hover i {
   color: #FFB6C1;/* Light Pink icon color on hover */
@@ -126,48 +126,9 @@ body {
   pointer-events: none;
 }
 
-.controls .active-btn i {
-  color: #2aac8c; /* Light Green icon color for active button */
-}
+
 
 /* ... (previous CSS code) ... */
-
-/* Theme button */
-.theme-btn {
-  top: 5%;
-  right: 3%;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background-color: rgba(42, 172, 140, 0.7); /* Transparent light green background */
-  cursor: pointer;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
-  transition: all 0.1s ease-in-out;
-}
-
-.theme-btn:active {
-  transform: translateY(-3px);
-}
-
-.theme-btn i {
-  font-size: 1.4rem;
-  color: #FFFFFF; /* White icon color for theme button */
-  pointer-events: none;
-  transition: color 0.3s ease; /* Added transition for icon color */
-}
-
-.theme-btn:hover {
-  background-color: #2aac8c; /* Light Green background color on hover */
-  transform: scale(1.1); /* Scale up on hover */
-}
-
-.theme-btn:hover i {
-  color: #FFB6C1; /* Light Pink icon color on hover */
-}
 
 
 /* Style for the Ms. Vanity introduction section */

@@ -44,13 +44,14 @@ body {
   text-decoration: none; /* Remove the underline */
 }
 
+/* Adjust the position of the control icons */
 .controls {
   position: fixed;
   z-index: 10;
   top: 50%;
   right: 3%;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Change to column layout */
   align-items: center;
   justify-content: center;
   transform: translateY(-50%);
@@ -99,16 +100,18 @@ body {
   color: #2aac8c; /* Light Green icon color for active button */
 }
 
+
 .theme-btn {
   top: 5%;
   right: 3%;
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-color: #2aac8c; /* Light Pink background color for theme button */
+  background-color: rgba(42, 172, 140, 0.7); /* Transparent light green background */
   cursor: pointer;
   position: fixed;
   display: flex;
+  flex-direction: column; /* Change to column layout */
   justify-content: center;
   align-items: center;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
@@ -126,48 +129,10 @@ body {
   pointer-events: none;
 }
 
-.controls .active-btn i {
-  color: #2aac8c; /* Light Green icon color for active button */
-}
 
 /* ... (previous CSS code) ... */
 
-/* Theme button */
-.theme-btn {
-  top: 5%;
-  right: 3%;
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  background-color: rgba(42, 172, 140, 0.7); /* Transparent light green background */
-  cursor: pointer;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
-  transition: all 0.1s ease-in-out;
-}
 
-.theme-btn:active {
-  transform: translateY(-3px);
-}
-
-.theme-btn i {
-  font-size: 1.4rem;
-  color: #FFFFFF; /* White icon color for theme button */
-  pointer-events: none;
-  transition: color 0.3s ease; /* Added transition for icon color */
-}
-
-.theme-btn:hover {
-  background-color: #2aac8c; /* Light Green background color on hover */
-  transform: scale(1.1); /* Scale up on hover */
-}
-
-.theme-btn:hover i {
-  color: #FFB6C1; /* Light Pink icon color on hover */
-}
 
 /* ... (rest of the CSS code) ... */
 
