@@ -149,11 +149,26 @@ h1 {
     font-size: 36px;
     margin-bottom: 20px;
 }
-
-h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+/* Style for the section title container */
+/* Style for the section title container */
+.section-title {
+    width: 150px;
+    margin: 0 auto; /* Center the container horizontally */
+    text-align: center; /* Center the text horizontally within the container */
+    background-color: #ffffff; /* Pink background color for the container */
+    padding: 2px 0; /* Reduce the padding for spacing */
+    border-radius: 10px; /* Rounded corners for the container */
 }
+
+/* Style for the h2 title within the section title container */
+.section-title h2 {
+    font-size: 20px; /* Reduce the font size for the title */
+    color:  #FFB6C1; /* Green text color */
+    font-family: 'YourFont', sans-serif; /* Specify your desired font */
+    margin: 0; /* Remove any default margin */
+}
+
+
 
 .product-section {
     margin-top: 20px;
