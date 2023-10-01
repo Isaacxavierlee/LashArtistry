@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+:root {
+  --color-primary: #73d9a9; /* Light Blue */
+  --color-secondary: #ffffff /* Coral */
+  --color-white: #FFFFFF;
+  --color-black: #000;
+  --color-grey0: #f8f8f8;
+  --color-grey-1: #dbe1e8;
+  --color-grey-2: #b2becd;
+  --color-grey-3: #6c7983;
+  --color-grey-4: #454e56;
+  --color-grey-5: #2a2e35;
+  --color-grey-6: #12181b;
+  --br-sm-2: 14px;
+  --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Add more styles using the light mode color scheme */
+
+body {
+  background-color: var(--color-primary);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  color: var(--color-white);
+  transition: all 0.4s ease-in-out;
+}
+
+.controls-container {
+  position: relative;
+  z-index: 11; /* Set a higher z-index to keep the controls above other content */
+}
+
+.controls.hidden {
+  display: none;
+}
+
+.controls-container .controls a {
+  text-decoration: none; /* Remove the underline */
+}
+
+/* Adjust the position of the control icons */
+.controls {
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  right: 3%;
+  display: flex;
+  flex-direction: column; /* Change to column layout */
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+}
+
+/* Control buttons */
+.controls .control {
+  padding: 1rem;
+  cursor: pointer;
+  background-color: rgba(230, 230, 250, 0.7); /* Transparent light purple background */
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.7rem 0;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.controls .control i {
+  font-size: 1.2rem;
+  color: #FFFFFF; /* White icon color */
+  pointer-events: none;
+  transition: color 0.3s ease; /* Added transition for icon color */
+}
+
+/* On hover, make them slightly more opaque */
+.controls .control:hover,
+.theme-btn:hover {
+  background-color: rgba(230, 230, 250, 0.9); /* Slightly more opaque light purple */
+  transform: scale(1.1); /* Scale up on hover */
+}
+
+.controls .control:hover i {
+  color: #FFB6C1;/* Light Pink icon color on hover */
+}
+
+.controls .active-btn {
+  background-color: #FFB6C1; /* Light Pink background color for active button */
+  transition: all 0.4s ease-in-out;
+}
+
+.controls .active-btn i {
+  color: #2aac8c; /* Light Green icon color for active button */
+}
+
+
+.theme-btn {
+  top: 5%;
+  right: 3%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgba(42, 172, 140, 0.7); /* Transparent light green background */
+  cursor: pointer;
+  position: fixed;
+  display: flex;
+  flex-direction: column; /* Change to column layout */
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.1s ease-in-out;
+  z-index: 12; /* Set a higher z-index to keep the theme button above other content */
+}
+
+.theme-btn:active {
+  transform: translateY(-3px);
+}
+
+.theme-btn i {
+  font-size: 1.4rem;
+  color: #FFFFFF; /* White icon color for theme button */
+  pointer-events: none;
+}
